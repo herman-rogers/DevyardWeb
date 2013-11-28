@@ -128,7 +128,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    #'blog',
+    'DevyardWeb',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

@@ -1,0 +1,43 @@
+{% extends "BlogMain.html" %}
+
+<!--{% block content %}
+    <div class ="main">
+    <!-- All the Posts -->
+    <ul>
+        {% for post in posts.object_list %}
+            <div id="blogHeading"><h1>{{ post.title }}</h1></div>
+            {% if "Boomer" in post.author or "boomer" in post.author %}
+                 <div id="boomerAvatar"></div>
+            {% endif %}
+            {% if "Elysia" in post.author or "elysia" in post.author %}
+                 <div id="elysiaAvatar"></div>
+            {% endif %}
+            {% if "James" in post.author or "james" in post.author %}
+                 <div id="jamesAvatar"></div>
+            {% endif %}
+            <ul>
+                
+                <div class="blogAuthor">By: {{ post.author }}</div>
+                <div class="blogTime">{{ post.created }}</div>
+                <div class="blogBody">{{ post.body|linebreaks }}</div>
+            </ul>
+        {% endfor %}
+    </ul>
+    <!--Next and previous links-->
+    {% if posts.object_list and posts.paginator.num_pages > 1 %}
+    <div class="blogPagination">
+        <span class="step-links">
+            {% if posts.has_previous %}
+                <a href="?page={{ posts.previous_page_number }}"> newer entries &lt;&lt;</a>
+            {% endif %}
+            <span class="current">
+                &nbsp;Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+            </span>
+            {% if posts.has_next %}
+                <a href="?page={{ posts.next_page_number }}"> &gt;&gt; older entries</a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+    </div>
+{% endblock %}-->

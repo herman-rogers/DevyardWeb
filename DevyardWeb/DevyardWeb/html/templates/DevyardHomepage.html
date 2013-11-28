@@ -1,63 +1,171 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
+	<body>
 	<head>
-		<meta name="HomePage" content="text/html; charset=iso-8859-1"></>
+		<meta name="HomePage" content="text/html; charset=iso-8859-1"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/ionicons.css"/>
 		<link rel="stylesheet" type="text/css" href="/static/css/homepage.css/" />
 		<title>TheDevyard</title>
-<!--    <link rel="stylesheet" type="text/css" href="/static/CSS/homepage.css/" />-->
 	</head>
+	    <div id=TopHeading>
+	    	<li>
+	    	    <a href=#top>Top</a>
+				<a href=#projects>Projects</a>
+	            <a href=#blog>Blog</a>
+				<a href=#team>Team</a>
+	    	</li>
+	    </div>
 	<div id="container">
-		<body>
+	<div id="middle">
 <!--		Main Header and Links underneath-->
 		<div id="Heading">
-			<h1>The Devyard </h1>
+			<div id="headingTitle"></div>
 			<div id="Links">
-				<a href="">Game Code </a>
-				<a href="">/ Twitter</a>
-				<a href="">/ LINKS</a>
+				<a href="http://www.github.com" class="icon-social-github"></a>
+				<a href="http://www.twitter.com" class="icon-social-twitter"></a>
+				<a href="http://www.facebook.com" class="icon-social-facebook"></a>
 			</div>
 		</div>
-		<div id="FirstSubheading">
-			<h2>Latest From the Blog<h2>
-			<div id="TagLine">Here we post things</div>
-				<h3>"Our new post about cakes"</h3>
-				<div id="Date">published 20/09/2013 at 2:30am</div>
-				<p>So this is a blog post, we write blogs...(read more)</p>
-		</div>
-		<div id="SecondSubheading">
-			<h2>Our Projects</h2>
+		<div id="SecondSubheading" style="overflow:auto">
+			<h1>Our Projects</h1>
 			<div id="TagLine">New Projects and Stuffs</div>
 			<ul>
-				<h3>Dreamhearth -- IndieSpeedRun 2013</h3>
-				<h3>CakeGame -- Ludum Dare 2013</h3>
-				<h3>Another Side Projects</h3>				
+				<div id="Project" style="float:left">
+					<div id="ludumAvatar"></div>
+					<h3>Ludum Dare December 2013</h3>
+					<li>
+<!--                        <a href="">Play in Browser</a>-->
+					    <a href="http://www.ludumdare.com/">Ludum Dare</a>
+				    <li>
+				</div>
+				<div id="Project" style="float:left">
+				    <div id="dreamAvatar"></div>
+				    <h3>DreamHearth 2013</h3>
+				    <li>
+					    <a href="/dreamhearth/">Play in Browser</a>
+					    <a href="http://www.escapistmagazine.com/content/indie-speed-run/?game=663">Indie Speed Run</a>
+				    </li>
+				    <p>DreamHearth is our first foray into video games. Created over a 48hr period, DreamHearth explores the dreamworld of a little girl
+				    who must face off nightmares with your help.</p>
+				</div>
+				<div id="Project" style="float:left">
+				    <div id="questionAvatar"></div>
+					<h3>New Project Coming</h3>
+					<li>
+					    <a href="">Find Out More</a>
+<!--					<a href=""></a>-->
+				    </li>
+				</div>
 			</ul>
+		</div>
+		<div id="FirstSubheading" style="overflow:auto">
+			<h1>Latest Posts</h1>
+		 	<div id="BlogUpdate" style="float:left">
+			    <h2>Our New Post About Cakes</h2>
+			    <h3>published 20/09/2013 at 2:30am</h3>
+				<p>So this is a blog post, we write blogs...(read more)</p>
+		    </div>
+			<div id="BlogUpdate" style="float:left">
+				<h2>Is Someone Padding This?</h2>
+		        <h3>published 12/25/1988</h3>
+				<p>Should probably pad this out. You guys see Christmas decorations
+			       are already out? Crazy stuff -- not even thanksgiving -- not like you brits
+			       have that over here. That should do it.</p>
+			</div>
+			<div id="BlogUpdate" style="float:left">
+		        <h2>What will this look like?</h2>
+				<h3>published in July or something</h3>
+			    <p>Does this div fit three across or only two?
+			       hard to tell through the Xamarin editor. Just a bunch
+			       of letters and numbers and stuff, not really much else.
+				</p>
+			</div>
 		</div>
 		<div id="ThirdSubheading">
-			<h2>The Team<h2>
-			<div id="TagLine">See whos behind the Devyard</div>
-			<ul>
-				<a id="avatarElysia" href="/"></a>
-				<h3>Elysia -- Artist</h3>
-				<a id="avatarJames" href="/"></a>
-				<h3>James -- Programmer</h3>
-				<a id="avatarJames" href="/"></a>
-				<h3>Boomer -- Programmer</h3>				
-			</ul>
+			<h1>The Team</h1>
+			<div id="Team">
+			    <ul>
+			    	<div class="TeamAvatars">
+			    	<h3>James <a class="icon-game-controller-b"></a> Programmer</h3>
+				    <p>Description</p>
+				    <div id="jamesAvatar"></div>
+				        <div class="TeamLinks">
+				        	<a href="http://jamestimms.com/" class="icon-person"></a>
+				            <a href="https://github.com/JamesTimms" class="icon-social-github"></a>
+				        </div>
+				    </div>
+				    <div class="TeamAvatars">
+				        <h3>Boomer <a class="icon-game-controller-a"></a> Programmer</h3>				
+				        <p>Boomer's just a programmer, programming.
+				        </p>
+				        <div id="boomerAvatar"></div>
+				        <div class="TeamLinks">
+				        	<a href="http://www.boomerweb.me" class="icon-earth"></a>
+				            <a href="https://github.com/herman-rogers" class="icon-social-github"></a>
+				        </div>
+				    </div>
+			    	<div class="TeamAvatars">
+			        <h3>Elysia <a class="icon-images"></a> Artist</h3>
+			    	<p>Elysia studied art and enjoys drawing creepy things</p>
+		     	    <div id="elysiaAvatar"></div>
+				        <div class="TeamLinks">
+				        	<a href="http://elysiaart.tumblr.com/" class="icon-social-tumblr"></a>
+				            <a href="http://elysiaart.wordpress.com/" class="icon-social-wordpress"></a>
+				        </div>
+			    	</div>
+			    </ul>
+			</div>
 		</div>
-		<div id="Navigation">
-			<ul>
-				<h3>Devyard</h3>
-				<h3>Blog</h3>
-				<h3>Projects</h3>
-				<h3>Team</h3>
-			</ul>
-		</div>	
 		<div id="Footer">
-        	<p>The Devyard: (Copyright 2012)</p>
-        	<p>Optimized for Google Chrome and Firefox</p>
+		    <p> Thanks to Steven at <a href="http://pandoraicons.deviantart.com/">PandoraIcons</a> for the awesome background!!</p>
+        	<small>The Devyard: (Copyright 2012)</small>
+        	<small>Optimized for Google Chrome and Firefox</small>
     	</div>
+	 </div>
+	 </div>
+<!--	Javascript-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function ( ){
+		var top = $('#Navigation').offset().top + 200 - parseFloat($('#Navigation').hide( ).css('marginTop').replace(/auto/, 0));
+  		$(window).scroll(function (event) {
+    	var y = $(this).scrollTop();
+    	if (y >= top) {
+   			$('#Navigation').fadeOut("slow").css('position', 'fixed');
+   		} else {
+   			$('#Navigation').fadeIn("fast").css('position', 'fixed');
+  		}
+  		});
+	});
+</script>
+<!--Moving to the right position when nav link is clicked-->
+<script>
+$( "a[href='#top']" ).click( function( ){
+  $( "html, body" ).animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+</script>
+<script>
+$("a[href='#blog']").click( function( ) {
+	var blog = $( FirstSubheading ).offset().top;
+	$( "html, body" ).animate( { scrollTop: blog }, "slow") ;
+	return false;
+});
+</script>
+<script>
+$("a[href='#projects']").click( function( ) {
+	var blog = $( SecondSubheading ).offset().top;
+	$( "html, body" ).animate( { scrollTop: blog }, "slow") ;
+	return false;
+});
+</script>
+<script>
+$("a[href='#team']").click( function( ) {
+	var blog = $( ThirdSubheading ).offset().top;
+	$( "html, body" ).animate( { scrollTop: blog }, "slow") ;
+	return false;
+});
+</script>
 		</div>
-		</body>
-	</div>
+	</body>
 </html>
