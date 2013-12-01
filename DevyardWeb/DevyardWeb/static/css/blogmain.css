@@ -42,7 +42,6 @@ p{
 }
 ul{
   overflow: hidden;
-
 }
 #TopHeading{
     background-color:       rgba(255,255,255,0.6);
@@ -60,6 +59,36 @@ ul{
 #TopHeading li {
     list-style-type: none;
     font-size: 75px;
+}
+#tags{
+    display:                inline;
+    margin-left:            10px;
+    width:                  50px;
+    font-size:              15px;
+}
+#tags a:link{
+    padding:                0.2em;
+    border-radius:          5px;
+    background-color:       #8C001A;
+    color: white;
+    -webkit-transition:     all 500ms ease-in;
+    -moz-transition:        all 500ms ease-in;
+}
+#tags a:visited{
+    padding:                0.2em;
+    border-radius:          5px;
+    background-color:       #8C001A;
+    color:                  white;
+    -webkit-transition:     all 500ms ease-in;
+    -moz-transition:        all 500ms ease-in;
+}
+#tags a:hover{
+    padding:                0.2em;
+    border-radius:          5px;
+    color:                  #8C001A;
+    -webkit-transition:     all 500ms ease-in;
+    -moz-transition:        all 500ms ease-in;
+    background-color:       rgba( 0,0,0,0 );
 }
 #blogHeading h1{
     margin-left:            auto;
@@ -80,6 +109,27 @@ ul{
     text-align: center;
 }
 .blogBody{
+    letter-spacing:         1px;
+    line-height:            32px;
+    font-size:              18px;
+    font-family:            Ubuntu, Tahoma, Helvetica, Verdana;
+    margin-left:            auto;
+    margin-right:           auto;
+    width:                  1000px;
+    margin-bottom:          50px;
+    word-wrap: 				break-word;
+	background-color:       rgba(255,255,255,0.6);
+    border: 				.5px solid #444;
+    -webkit-box-shadow: 	0px 0px 12px rgba(0, 0, 0, 0.4); 
+    box-shadow: 			0px 1px 6px rgba(23, 69, 88, .5);
+    padding: 				1em;
+}
+.archBody{
+    margin-top:             100px;
+    letter-spacing:         1px;
+    line-height:            32px;
+    font-size:              18px;
+    font-family:            Ubuntu, Tahoma, Helvetica, Verdana;
     margin-left:            auto;
     margin-right:           auto;
     width:                  1000px;
@@ -97,6 +147,14 @@ ul{
     width:                  1000px;
     word-wrap: 				break-word;
 }
+.blogComments{
+    margin-left:            auto;
+    margin-right:           auto;
+    width:                  1000px;
+    word-wrap: 				break-word;
+}
+
+
 .blogPagination{
     margin-left:            auto;
     margin-right:           auto;
@@ -111,6 +169,12 @@ ul{
     text-align:             center;
     bottom:                 0;
 }
+#disqus_thread{
+    margin-left:            auto;
+    margin-right:           auto;
+    width:                  1000px;
+    margin-top: 100px;
+}
 #Footer p{
     margin:                 0px;
     font-size:              30px;
@@ -119,28 +183,28 @@ ul{
 
 /*Images and Fonts Below Here*/
 #elysiaAvatar{
-    background-image:       url( "/static/images/elysiaAvatar.jpg" );
+    background-image:       url( "/static/images/elysiaBlog.jpg" );
     background-repeat:      no-repeat;
     margin:                 20px auto;
     border-radius:          10px;
-    width:                  300px;
-    height:                 300px;
+    width:                  100px;
+    height:                 100px;
 }
 #jamesAvatar{
-    background-image:       url( "/static/images/jamesAvatar.jpg" );
+    background-image:       url( "/static/images/jamesBlog.jpg" );
     background-repeat:      no-repeat;
     margin:                 20px auto;
     border-radius:          10px;
-    width:                  300px;
-    height:                 300px;
+    width:                  100px;
+    height:                 100px;
 }
 #boomerAvatar{
-    background-image:       url( "/static/images/boomerAvatar.jpg" );
+    background-image:       url( "/static/images/boomerBlog.jpg" );
     background-repeat:      no-repeat;
     margin:                 20px auto;
     border-radius:          10px;
-    width:                  300px;
-    height:                 300px;
+    width:                  100px;
+    height:                 100px;
 }
 #dreamAvatar{
     background-image:       url( "/static/images/dreamAvatar.png" );

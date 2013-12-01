@@ -59,26 +59,39 @@
 			</ul>
 		</div>
 		<div id="FirstSubheading" style="overflow:auto">
-			<h1>Latest Posts</h1>
+			<h1><a href="/blog/">Latest Posts</a></h1>
 		 	<div id="BlogUpdate" style="float:left">
-			    <h2>Our New Post About Cakes</h2>
-			    <h3>published 20/09/2013 at 2:30am</h3>
-				<p>So this is a blog post, we write blogs...(read more)</p>
+			{% block blogUpdate %}
+    			{% for post in posts %}
+        		{% if post.id == posts.paginator.count %}
+	            	<h2>{{post.title}}</h2>
+	     	   	 	<h3>on {{ post.created|date:"m/d/Y" }}</h3>
+	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/{{post.id}}">read more</a></p>
+		 		{% endif %}
+    			{% endfor %}
+			{% endblock %}
 		    </div>
 			<div id="BlogUpdate" style="float:left">
-				<h2>Is Someone Padding This?</h2>
-		        <h3>published 12/25/1988</h3>
-				<p>Should probably pad this out. You guys see Christmas decorations
-			       are already out? Crazy stuff -- not even thanksgiving -- not like you brits
-			       have that over here. That should do it.</p>
+			{% block blogUpdate2 %}
+    			{% for post in posts %}
+        		{% if post.id == posts.paginator.count|add:"-1" %}
+	            	<h2>{{post.title}}</h2>
+	     	   	 	<h3>on {{ post.created|date:"m/d/Y" }}</h3>
+	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/{{post.id}}">read more</a></p>
+		 		{% endif %}
+    			{% endfor %}
+			{% endblock %}
 			</div>
 			<div id="BlogUpdate" style="float:left">
-		        <h2>What will this look like?</h2>
-				<h3>published in July or something</h3>
-			    <p>Does this div fit three across or only two?
-			       hard to tell through the Xamarin editor. Just a bunch
-			       of letters and numbers and stuff, not really much else.
-				</p>
+			{% block blogUpdate3 %}
+    			{% for post in posts %}
+        		{% if post.id == posts.paginator.count|add:"-2" %}
+	            	<h2>{{post.title}}</h2>
+	     	   	 	<h3>on {{ post.created|date:"m/d/Y" }}</h3>
+	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/{{post.id}}">read more</a></p>
+		 		{% endif %}
+    			{% endfor %}
+			{% endblock %}
 			</div>
 		</div>
 		<div id="ThirdSubheading">

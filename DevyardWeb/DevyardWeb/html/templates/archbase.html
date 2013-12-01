@@ -27,26 +27,6 @@
         	<small>Optimized for Google Chrome and Firefox</small>
     	</div>
 	 </div>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript">
-	$(function ( ){
-		var top = $('#Navigation').offset().top + 200 - parseFloat($('#Navigation').hide( ).css('marginTop').replace(/auto/, 0));
-  		$(window).scroll(function (event) {
-    	var y = $(this).scrollTop();
-    	if (y >= top) {
-   			$('#Navigation').fadeOut("slow").css('position', 'fixed');
-   		} else {
-   			$('#Navigation').fadeIn("fast").css('position', 'fixed');
-  		}
-  		});
-	});
-</script>
-<script>
-$( "a[href='#top']" ).click( function( ){
-  $( "html, body" ).animate({ scrollTop: 0 }, "slow");
-  return false;
-});
-</script>
     </div>
 </body>
 </html>
