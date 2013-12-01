@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<body>
+	<div id="sidebar">{% block sidebar %} {% endblock %}</div>
+	<head>
+		<meta name="BlogMain" content="text/html; charset=iso-8859-1"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/ionicons.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/blogmain.css/" />
+		<title>TheDevyard</title>
+	</head>
+	    <div id=TopHeading>
+	    	<li>
+	    	    <a href=#top>Top</a>
+				<a href="">Home</a>
+				{% if user.is_staff %}
+				<a href="/admin/">(Add-A-Post</a>
+				<a href="http://disqus.com/">Comments)</a>
+				{% endif %}
+	    	</li>
+	    </div>
+	<div id="container">
+<!--		Main Header and Links underneath-->
+        {% block content %}{% endblock %}
+		<div id="Footer">
+		    <p> Thanks to Steven at <a href="http://pandoraicons.deviantart.com/">PandoraIcons</a> for the awesome background!!</p>
+        	<small>The Devyard: (Copyright 2012)</small>
+        	<small>Optimized for Google Chrome and Firefox</small>
+    	</div>
+	 </div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function ( ){
+		var top = $('#Navigation').offset().top + 200 - parseFloat($('#Navigation').hide( ).css('marginTop').replace(/auto/, 0));
+  		$(window).scroll(function (event) {
+    	var y = $(this).scrollTop();
+    	if (y >= top) {
+   			$('#Navigation').fadeOut("slow").css('position', 'fixed');
+   		} else {
+   			$('#Navigation').fadeIn("fast").css('position', 'fixed');
+  		}
+  		});
+	});
+</script>
+<script>
+$( "a[href='#top']" ).click( function( ){
+  $( "html, body" ).animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+</script>
+    </div>
+</body>
+</html>

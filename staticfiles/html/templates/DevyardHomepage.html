@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<body>
+	<head>
+		<meta name="HomePage" content="text/html; charset=iso-8859-1"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/ionicons.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/homepage.css/" />
+		<title>TheDevyard</title>
+	</head>
+	    <div id=TopHeading>
+	    	<li>
+	    	    <a href=#top>Top</a>
+				<a href=#projects>Projects</a>
+	            <a href=#blog>Blog</a>
+				<a href=#team>Team</a>
+	    	</li>
+	    </div>
+	<div id="container">
+	<div id="middle">
+<!--		Main Header and Links underneath-->
+		<div id="Heading">
+			<div id="headingTitle"></div>
+			<div id="Links">
+				<a href="http://www.github.com" class="icon-social-github"></a>
+				<a href="http://www.twitter.com" class="icon-social-twitter"></a>
+				<a href="http://www.facebook.com" class="icon-social-facebook"></a>
+			</div>
+		</div>
+		<div id="SecondSubheading" style="overflow:auto">
+			<h1>Our Projects</h1>
+			<div id="TagLine">New Projects and Stuffs</div>
+			<ul>
+				<div id="Project" style="float:left">
+					<div id="ludumAvatar"></div>
+					<h3>Ludum Dare December 2013</h3>
+					<li>
+<!--                        <a href="">Play in Browser</a>-->
+					    <a href="http://www.ludumdare.com/">Ludum Dare</a>
+				    <li>
+				</div>
+				<div id="Project" style="float:left">
+				    <div id="dreamAvatar"></div>
+				    <h3>DreamHearth 2013</h3>
+				    <li>
+					    <a href="/dreamhearth/">Play in Browser</a>
+					    <a href="http://www.escapistmagazine.com/content/indie-speed-run/?game=663">Indie Speed Run</a>
+				    </li>
+				    <p>DreamHearth is our first foray into video games. Created over a 48hr period, DreamHearth explores the dreamworld of a little girl
+				    who must face off nightmares with your help.</p>
+				</div>
+				<div id="Project" style="float:left">
+				    <div id="questionAvatar"></div>
+					<h3>New Project Coming</h3>
+					<li>
+					    <a href="">Find Out More</a>
+<!--					<a href=""></a>-->
+				    </li>
+				</div>
+			</ul>
+		</div>
+		<div id="FirstSubheading" style="overflow:auto">
+			<h1><a href="/blog/">Latest Posts</a></h1>
+		 	<div id="BlogUpdate" style="float:left">
+			{% block blogUpdate %}
+    			{% for post in posts %}
+        		{% if post.id == posts.paginator.count %}
+	            	<h2>{{post.title}}</h2>
+	     	   	 	<h3>on {{ post.created|date:"m/d/Y" }}</h3>
+	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/{{post.id}}">read more</a></p>
+		 		{% endif %}
+    			{% endfor %}
+			{% endblock %}
+		    </div>
+			<div id="BlogUpdate" style="float:left">
+			{% block blogUpdate2 %}
+    			{% for post in posts %}
+        		{% if post.id == posts.paginator.count|add:"-1" %}
+	            	<h2>{{post.title}}</h2>
+	     	   	 	<h3>on {{ post.created|date:"m/d/Y" }}</h3>
+	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/{{post.id}}">read more</a></p>
+		 		{% endif %}
+    			{% endfor %}
+			{% endblock %}
+			</div>
+			<div id="BlogUpdate" style="float:left">
+			{% block blogUpdate3 %}
+    			{% for post in posts %}
+        		{% if post.id == posts.paginator.count|add:"-2" %}
+	            	<h2>{{post.title}}</h2>
+	     	   	 	<h3>on {{ post.created|date:"m/d/Y" }}</h3>
+	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/{{post.id}}">read more</a></p>
+		 		{% endif %}
+    			{% endfor %}
+			{% endblock %}
+			</div>
+		</div>
+		<div id="ThirdSubheading">
+			<h1>The Team</h1>
+			<div id="Team">
+			    <ul>
+			    	<div class="TeamAvatars">
+			    	<h3>James <a class="icon-game-controller-b"></a> Programmer</h3>
+				    <p>Description</p>
+				    <div id="jamesAvatar"></div>
+				        <div class="TeamLinks">
+				        	<a href="http://jamestimms.com/" class="icon-person"></a>
+				            <a href="https://github.com/JamesTimms" class="icon-social-github"></a>
+				        </div>
+				    </div>
+				    <div class="TeamAvatars">
+				        <h3>Boomer <a class="icon-game-controller-a"></a> Programmer</h3>				
+				        <p>Boomer's just a programmer, programming.
+				        </p>
+				        <div id="boomerAvatar"></div>
+				        <div class="TeamLinks">
+				        	<a href="http://www.boomerweb.me" class="icon-earth"></a>
+				            <a href="https://github.com/herman-rogers" class="icon-social-github"></a>
+				        </div>
+				    </div>
+			    	<div class="TeamAvatars">
+			        <h3>Elysia <a class="icon-images"></a> Artist</h3>
+			    	<p>Elysia studied art and enjoys drawing creepy things</p>
+		     	    <div id="elysiaAvatar"></div>
+				        <div class="TeamLinks">
+				        	<a href="http://elysiaart.tumblr.com/" class="icon-social-tumblr"></a>
+				            <a href="http://elysiaart.wordpress.com/" class="icon-social-wordpress"></a>
+				        </div>
+			    	</div>
+			    </ul>
+			</div>
+		</div>
+		<div id="Footer">
+		    <p> Thanks to Steven at <a href="http://pandoraicons.deviantart.com/">PandoraIcons</a> for the awesome background!!</p>
+        	<small>The Devyard: (Copyright 2012)</small>
+        	<small>Optimized for Google Chrome and Firefox</small>
+    	</div>
+	 </div>
+	 </div>
+<!--	Javascript-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function ( ){
+		var top = $('#Navigation').offset().top + 200 - parseFloat($('#Navigation').hide( ).css('marginTop').replace(/auto/, 0));
+  		$(window).scroll(function (event) {
+    	var y = $(this).scrollTop();
+    	if (y >= top) {
+   			$('#Navigation').fadeOut("slow").css('position', 'fixed');
+   		} else {
+   			$('#Navigation').fadeIn("fast").css('position', 'fixed');
+  		}
+  		});
+	});
+</script>
+<!--Moving to the right position when nav link is clicked-->
+<script>
+$( "a[href='#top']" ).click( function( ){
+  $( "html, body" ).animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+</script>
+<script>
+$("a[href='#blog']").click( function( ) {
+	var blog = $( FirstSubheading ).offset().top;
+	$( "html, body" ).animate( { scrollTop: blog }, "slow") ;
+	return false;
+});
+</script>
+<script>
+$("a[href='#projects']").click( function( ) {
+	var blog = $( SecondSubheading ).offset().top;
+	$( "html, body" ).animate( { scrollTop: blog }, "slow") ;
+	return false;
+});
+</script>
+<script>
+$("a[href='#team']").click( function( ) {
+	var blog = $( ThirdSubheading ).offset().top;
+	$( "html, body" ).animate( { scrollTop: blog }, "slow") ;
+	return false;
+});
+</script>
+		</div>
+	</body>
+</html>
