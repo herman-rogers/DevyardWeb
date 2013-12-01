@@ -10,6 +10,12 @@ import datetime
 def homepage( request ):
     posts = Post.objects.all( ).order_by( "-created" )[:50]
     paginator = Paginator( posts, 1000 ) 
+    try: page = int( request.GET.get( "page", "1" ) )
+    except ValueError: page = 1
+    try:
+        posts = paginator.page( page )
+    except ( InvalidPage, EmptyPage ):
+        posts = paginator.page( paginator.num_pages )
     return render_to_response( "DevyardHomepage.html", dict( posts=posts, user=request.user ) )
 def dreamhearth( request ):
     now = datetime.datetime.now( )
