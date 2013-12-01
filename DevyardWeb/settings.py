@@ -127,7 +127,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'DevyardWeb',
     'taggit',
-    'gunicorn',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
