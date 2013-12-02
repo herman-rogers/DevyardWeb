@@ -23,7 +23,7 @@
 <!--		Main Header and Links underneath-->
 		<div id="Heading">
 			<div id="headingTitle"></div>
-			<div id="Links">
+			<div class="Links">
 				<a href="http://www.github.com" class="icon-social-github"></a>
 				<a href="http://www.twitter.com" class="icon-social-twitter"></a>
 				<a href="http://www.facebook.com" class="icon-social-facebook"></a>
@@ -151,6 +151,13 @@
   		}
   		});
 	});
+</script>
+<script>
+$(window).scroll(function () { 
+   $('.Links').css({
+      'top' : -($(this).scrollTop()/3)+"px"
+   });
+});
 </script>
 <!--Moving to the right position when nav link is clicked-->
 <script>

@@ -1,12 +1,12 @@
 body{
     color:                  #CC0000;                   
 	font-family:            Elysia, Tahoma, Helvetica, Verdana;
+    font-size:              24px;
     background-image: 		url('/static/images/mainBackground.jpg');
     background-size: 		1366px 1500px;
     background-repeat: 		no-repeat;
     background-position: 	center;
-    background-attachment:	fixed;
-    font-size:              24px;
+    background-attachment:	fixed;    
 }
 a:link {
     text-decoration:        none;
@@ -18,7 +18,6 @@ a:visited{
 a:hover{
     color:                  #CC0000;
 }
-
 i {
     font-family: ionicons;
 }
@@ -89,6 +88,9 @@ p{
 #Heading a{
     font-size:              35px;
     padding: 1em;
+}
+.Links{
+    position: relative;
 }
 #FirstSubheading{
     padding-top:            75px;
@@ -188,9 +190,7 @@ p{
 }
 #ThirdSubheading h1{
     padding-top:            2em;
-}
-#ThirdSubheading h3{
-	margin: 0;
+    position: relative;
 }
 #Team{
 	padding:                1em;
