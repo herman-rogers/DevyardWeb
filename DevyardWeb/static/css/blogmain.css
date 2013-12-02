@@ -20,7 +20,7 @@ a:hover{
 }
 h1{
    font-family:             ElysiaBold, Elysia, Tahoma, Helvetica, Verdana;
-   font-size: 60px; 
+   font-size:               60px; 
 }
 h3{
     font-family:            ElysiaSemi, Elysia, Tahoma, Helvetica, Verdana;      
@@ -58,7 +58,7 @@ ul{
 }
 #TopHeading li {
     list-style-type: none;
-    font-size: 75px;
+    font-size: 70px;
 }
 #tags{
     display:                inline;
