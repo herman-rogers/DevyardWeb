@@ -24,7 +24,7 @@ i {
 
 h1{
    font-family:             ElysiaBold, Elysia, Tahoma, Helvetica, Verdana;
-   font-size: 60px; 
+   font-size:               60px; 
 }
 h2{
     font-family:            ElysiaBold, Elysia, Tahoma, Helvetica, Verdana;
@@ -190,7 +190,6 @@ p{
 }
 #ThirdSubheading h1{
     padding-top:            2em;
-    position: relative;
 }
 #Team{
 	padding:                1em;
