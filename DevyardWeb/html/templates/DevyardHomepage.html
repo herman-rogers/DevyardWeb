@@ -68,7 +68,7 @@
         		{% if post.id == posts.paginator.count %}
 	            	<h2>{{post.title}}</h2>
 	     	   	 	<h3>on {{ post.created|date:"m/d/Y" }}</h3>
-	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/{{post.id}}">read more</a></p>
+	     	    	<p>{{ post.body|slice:"220" }}....<a href="/blog/">read more</a></p>
 		 		{% endif %}
     			{% endfor %}
 			{% endblock %}
