@@ -115,10 +115,10 @@ p{
     border: 				.5px solid #444;
     -webkit-box-shadow: 	0px 0px 12px rgba(0, 0, 0, 0.4); 
     box-shadow: 			0px 1px 6px rgba(23, 69, 88, .5);
-    padding: 				1em;
-    margin-right:           10px;
+    padding: 				        1em;
+    margin-right:           5px;
     margin-bottom:          0.5em;
-    padding: 				0.8em;
+    padding: 				        0.8em;
     width:                  283px;
     height:                 400px;
     max-height:             400px;
@@ -131,8 +131,8 @@ p{
 #BlogUpdate p{
     text-align:             left;
     margin-top:             25px;
-	width:                  250px;
-	max-width:              250px;
+  	width:                  250px;
+	max-width:                250px;
 }
 #SecondSubheading{
     padding: 				1em;
